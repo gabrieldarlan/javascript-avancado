@@ -67,7 +67,9 @@
             let negociacoes = [];
 
             cursor.onsuccess = e => {
+
                 let atual = e.target.result;
+
                 if (atual) {
                     let dado = atual.value;
                     negociacoes.push(new Negociacao(dado._data, dado._quantidade, dado._valor));
@@ -81,9 +83,13 @@
 
             cursor.onerror = e => {
                 console.log(e.target.error.name);
-                
+
             }
+
+
         }
+
+     
 
     </script>
 </body>
